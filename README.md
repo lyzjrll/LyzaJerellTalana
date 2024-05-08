@@ -16,6 +16,7 @@ I am Lyza Jerell Talaña, a passionate individual with a flair for coding and da
 - [Oracle Cloud Data Management 2023 Certified Foundations Associate](https://catalog-education.oracle.com/pls/certview/sharebadge?id=67D9723D78376F0D49E1F2AF55B5CCC9637BA758F3107E976AFA468B7BDC8F39)
 - [Oracle Cloud Infrastructure 2023 Certified Foundations Associate](https://catalog-education.oracle.com/pls/certview/sharebadge?id=0BD4D05187E9AC571223E86F87577D0F5CB56932368317107AC9C839E210BE2C)
 - [SQL and Relational Databases 101](https://courses.cognitiveclass.ai/certificates/4d76da7856834392887d626cde19dff6)
+- [NoSQL and DBaaS 101](https://courses.cognitiveclass.ai/certificates/60540cd6a23e45a1b28fbc2d027fd887)
 
 ## Skill Sets
 
