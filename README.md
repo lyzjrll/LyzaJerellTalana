@@ -35,7 +35,7 @@ I am Lyza Jerell Talaña, a passionate individual with a flair for coding and da
 
 ## Let's Connect!
 
-- LinkedIn: [LinkedIn Profile](www.linkedin.com/in/lyza-jerell-talaña-93b7122a4)
+- LinkedIn: [My LinkedIn Profile](www.linkedin.com/in/lyza-jerell-talaña-93b7122a4)
 - Email: lyzaj.talana@gmail.com
 
 Feel free to reach out if you want to discuss coding, databases, or anything tech-related!
