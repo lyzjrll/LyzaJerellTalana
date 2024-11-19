@@ -99,7 +99,7 @@
                 width: 100%;
             }
         }
-        
+
         @media screen and (min-width: 768px) and (max-width: 991px) {
             .col-text {
                 -webkit-column-count: 2;
@@ -115,31 +115,18 @@
 
 <body data-spy="scroll" data-target=".navbar">
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Lyza's Portfolio</a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#skills">My Skills</a></li>
-                    <li><a href="#certs">My Certifications</a></li>
-                    <li><a href="#badges">My Badges</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
-                </ul>
-            </div>
-        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">My Skills</a></li>
+            <li><a href="#certs">My Certifications</a></li>
+            <li><a href="#badges">My Badges</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
     </nav>
 
     <section id="home" class="cl_white">
-        <h1>My Portfolio</h1>
+        <h1>Lyza Jerell Talaña's Portfolio</h1>
         <p>Welcome to my World, The life of a Programmer.</p>
         <a href="#contact">
             <button class="btn btn-default">Contact Me</button>
@@ -229,40 +216,28 @@
         <div class="page-header">
             <h1 class="text-center">Contact Me</h1>
         </div>
-        <div class="container">
-            <form class="form-horizontal">
-                <div class="form-group">
-                    <label for="name" class="col-sm-2 control-label">Full Name</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="name" placeholder="Full Name">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="email" class="col-sm-2 control-label">Email</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email" placeholder="Email">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="message" class="col-sm-2 control-label">Message</label>
-                    <div class="col-sm-10">
-                        <textarea class="form-control" id="message" rows="5" placeholder="Your message"></textarea>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </div>
-                </div>
-            </form>
-        </div>
+        <form class="col-md-5 col-md-offset-4">
+            <div class="form-group">
+                <input class="form-control" placeholder="Enter Your Name" type="text"/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Enter Your E-mail" type="text"/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Subject" type="text"/>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control rows-10">Comments</textarea>
+            </div>
+            <div class="form-group">
+                <input class="btn btn-success btn-block" type="submit"/>
+            </div>
+        </form>
     </section>
 
     <footer>
-        <p>Created by Lyza Jerell Talaña | New Era University</p>
+        <p class="mb-0">Made by Talaña, Lyza Jerell S. | 3BSIT-2 | © 2024</p>
     </footer>
+
 </body>
 </html>
