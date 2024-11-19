@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lyza's Portfolio</title>
+    <title>Portfolio</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -18,7 +18,6 @@
         section#contact {
             margin-top: 0;
             margin-bottom: 0;
-            background: silver;
         }
 
         .cl_white {
@@ -73,6 +72,7 @@
             margin-top: 20px;
         }
 
+        /* Responsive styles */
         @media screen and (max-width: 767px) {
             #home {
                 padding-top: 50px;
@@ -87,6 +87,7 @@
                 -webkit-column-count: 1;
             }
 
+            /* Ensuring images fit well on small screens */
             #skills img, #certs img, #badges img {
                 width: 80%;
                 margin: 10px auto;
@@ -96,15 +97,13 @@
                 width: 50%;
             }
 
+            /* Contact form inputs take full width on small screens */
             .form-group input, .form-group textarea {
                 width: 100%;
             }
-
-            footer p {
-                font-size: 0.9em;
-            }
         }
 
+        /* Tablet view (768px - 991px) */
         @media screen and (min-width: 768px) and (max-width: 991px) {
             .col-text {
                 -webkit-column-count: 2;
@@ -131,7 +130,7 @@
     </nav>
 
     <section id="home" class="cl_white">
-        <h1>Lyza Jerell Talaña's Portfolio</h1>
+        <h1>My Portfolio</h1>
         <p>Welcome to my World, The life of a Programmer.</p>
         <a href="#contact">
             <button class="btn btn-default">Contact Me</button>
@@ -217,12 +216,11 @@
         </div>
     </section>
 
-    <!-- Updated Contact Section -->
-    <section id="contact">
+    <section id="contact" style="background: silver">
         <div class="page-header">
             <h1 class="text-center">Contact Me</h1>
         </div>
-        <form class="col-md-6 col-md-offset-3">
+        <form class="col-md-5 col-md-offset-4">
             <div class="form-group">
                 <input class="form-control" placeholder="Enter Your Name" type="text"/>
             </div>
@@ -242,7 +240,8 @@
     </section>
 
     <footer>
-        <p>&copy; Made by Talaña, Lyza Jerell S. | 3BSIT-2 | © 2024 Applications Development and Emerging Technologies | All Rights Reserved.</p>
+        <p class="mb-0">Made by Talaña, Lyza Jerell S. | 3BSIT-2 | © 2024</p>
     </footer>
+
 </body>
 </html>
