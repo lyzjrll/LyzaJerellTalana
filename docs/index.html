@@ -29,8 +29,7 @@
         }
 
         img {
-            width: 100%;
-            max-width: 250px; /* limit max width */
+            width: 250px;
             transition: opacity 0.5s ease-in-out;
         }
 
@@ -38,9 +37,14 @@
             opacity: .10;
         }
 
-        #certs img, #skills img, #badges img {
-            width: 100%;
-            max-width: 290px;
+        #certs img {
+            width: 290px;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        #skills img, #badges img {
+            width: 225px;
+            transition: opacity 0.5s ease-in-out;
         }
 
         .col-text {
@@ -74,6 +78,10 @@
 
         /* Responsive styles */
         @media screen and (max-width: 767px) {
+            img {
+                width: 80%;
+            }
+
             #home {
                 padding-top: 50px;
                 padding-left: 15px;
@@ -87,31 +95,13 @@
                 -webkit-column-count: 1;
             }
 
-            /* Ensuring images fit well on small screens */
-            #skills img, #certs img, #badges img {
-                width: 80%;
-                margin: 10px auto;
+            .navbar-toggle {
+                display: block;
             }
 
-            .panel-body img {
-                width: 50%;
-            }
-
-            /* Contact form inputs take full width on small screens */
-            .form-group input, .form-group textarea {
-                width: 100%;
-            }
-        }
-
-        /* Tablet view (768px - 991px) */
-        @media screen and (min-width: 768px) and (max-width: 991px) {
-            .col-text {
-                -webkit-column-count: 2;
-            }
-
-            #skills img, #certs img, #badges img {
-                width: 80%;
-                margin: 10px auto;
+            /* Ensure the navbar collapses */
+            .navbar-collapse {
+                text-align: center;
             }
         }
     </style>
@@ -119,14 +109,27 @@
 
 <body data-spy="scroll" data-target=".navbar">
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <ul class="nav navbar-nav">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">My Skills</a></li>
-            <li><a href="#certs">My Certifications</a></li>
-            <li><a href="#badges">My Badges</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#contact">Contact Me</a></li>
-        </ul>
+        <div class="container-fluid">
+            <!-- Navbar toggle button for mobile screens -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- Navbar brand (Logo or name) -->
+            <a class="navbar-brand" href="#home">Portfolio</a>
+            <!-- Navbar items -->
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">My Skills</a></li>
+                    <li><a href="#certs">My Certifications</a></li>
+                    <li><a href="#badges">My Badges</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <section id="home" class="cl_white">
@@ -142,13 +145,13 @@
             <h1 class="text-center">My Skills</h1>
         </div>
         <div class="text-center">
-            <img src="pic/bootstrap_logo.png" class="img-thumbnail"/>
-            <img src="pic/javascript.png" class="img-thumbnail"/>
-            <img src="pic/html.png" class="img-thumbnail"/>
-            <img src="pic/css.png" class="img-thumbnail"/>
-            <img src="pic/java.png" class="img-thumbnail"/>
-            <img src="pic/mysql.png" class="img-thumbnail"/>
-            <img src="pic/php.png" class="img-thumbnail"/>
+            <img src="pic/bootstrap_logo.png" class="img-thumbnail img-responsive"/>
+            <img src="pic/javascript.png" class="img-thumbnail img-responsive"/>
+            <img src="pic/html.png" class="img-thumbnail img-responsive"/>
+            <img src="pic/css.png" class="img-thumbnail img-responsive"/>
+            <img src="pic/java.png" class="img-thumbnail img-responsive"/>
+            <img src="pic/mysql.png" class="img-thumbnail img-responsive"/>
+            <img src="pic/php.png" class="img-thumbnail img-responsive"/>
         </div>
     </section>
 
@@ -157,11 +160,11 @@
             <h1 class="text-center">My Certifications</h1>
         </div>
         <div class="text-center">
-            <img src="pic/eCert_OCI_CFA.jpg" class="img-thumbnail"/>
-            <img src="pic/eCert_OCDM.jpg" class="img-thumbnail"/>
-            <img src="pic/eCert_OCI_AI.jpg" class="img-thumbnail"/>
-            <img src="pic/Introduction_to_Cybersecurity_Certificate.jpg" class="img-thumbnail"/>
-            <img src="pic/Ethical_Hacker_Certificate.jpg" class="img-thumbnail"/>
+            <img src="pic/eCert_OCI_CFA.jpg" class="img-thumbnail img-responsive"/>
+            <img src="pic/eCert_OCDM.jpg" class="img-thumbnail img-responsive"/>
+            <img src="pic/eCert_OCI_AI.jpg" class="img-thumbnail img-responsive"/>
+            <img src="pic/Introduction_to_Cybersecurity_Certificate.jpg" class="img-thumbnail img-responsive"/>
+            <img src="pic/Ethical_Hacker_Certificate.jpg" class="img-thumbnail img-responsive"/>
         </div>
     </section>
 
@@ -170,11 +173,11 @@
             <h1 class="text-center">My Badges</h1>
         </div>
         <div class="text-center">
-            <img src="pic/Introduction_to_Cybersecurity_Badge.png" class="img-thumbnail"/>
-            <img src="pic/Ethical_Hacker_Badge.png" class="img-thumbnail"/>
-            <img src="pic/OCI_CFA.jpg" class="img-thumbnail"/>
-            <img src="pic/OCDMF.jpg" class="img-thumbnail"/>
-            <img src="pic/OCI_AIFCA.jpg" class="img-thumbnail"/>
+            <img src="pic/Introduction_to_Cybersecurity_Badge.png" class="img-thumbnail img-responsive"/>
+            <img src="pic/Ethical_Hacker_Badge.png" class="img-thumbnail img-responsive"/>
+            <img src="pic/OCI_CFA.jpg" class="img-thumbnail img-responsive"/>
+            <img src="pic/OCDMF.jpg" class="img-thumbnail img-responsive"/>
+            <img src="pic/OCI_AIFCA.jpg" class="img-thumbnail img-responsive"/>
         </div>
     </section>
 
@@ -231,17 +234,16 @@
                 <input class="form-control" placeholder="Subject" type="text"/>
             </div>
             <div class="form-group">
-                <textarea class="form-control rows-10">Comments</textarea>
+                <textarea class="form-control" placeholder="Enter Message"></textarea>
             </div>
             <div class="form-group">
-                <input class="btn btn-success btn-block" type="submit"/>
+                <button class="btn btn-danger form-control">Send</button>
             </div>
         </form>
     </section>
 
     <footer>
-        <p class="mb-0">Made by Talaña, Lyza Jerell S. | 3BSIT-2 | © 2024</p>
+        <p>All Rights Reserved &copy; 2024 Talaña Lyza Jerell</p>
     </footer>
-
 </body>
 </html>
