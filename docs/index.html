@@ -29,7 +29,8 @@
         }
 
         img {
-            width: 250px;
+            width: 100%;
+            max-width: 250px; /* limit max width */
             transition: opacity 0.5s ease-in-out;
         }
 
@@ -37,14 +38,9 @@
             opacity: .10;
         }
 
-        #certs img {
-            width: 290px;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        #skills img, #badges img {
-            width: 225px;
-            transition: opacity 0.5s ease-in-out;
+        #certs img, #skills img, #badges img {
+            width: 100%;
+            max-width: 290px;
         }
 
         .col-text {
@@ -76,11 +72,8 @@
             margin-top: 20px;
         }
 
+        /* Responsive styles */
         @media screen and (max-width: 767px) {
-            img {
-                width: 80%;
-            }
-
             #home {
                 padding-top: 50px;
                 padding-left: 15px;
@@ -92,6 +85,33 @@
 
             .col-text {
                 -webkit-column-count: 1;
+            }
+
+            /* Ensuring images fit well on small screens */
+            #skills img, #certs img, #badges img {
+                width: 80%;
+                margin: 10px auto;
+            }
+
+            .panel-body img {
+                width: 50%;
+            }
+
+            /* Contact form inputs take full width on small screens */
+            .form-group input, .form-group textarea {
+                width: 100%;
+            }
+        }
+
+        /* Tablet view (768px - 991px) */
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            .col-text {
+                -webkit-column-count: 2;
+            }
+
+            #skills img, #certs img, #badges img {
+                width: 80%;
+                margin: 10px auto;
             }
         }
     </style>
