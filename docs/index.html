@@ -4,27 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <!-- Bootstrap 4.5.0 CDN -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Optional JavaScript; Bootstrap 4.5.0 dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <style>
+        /* Additional styles if needed for fine-tuning */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
         }
         .section-padding {
             padding: 60px 0;
-        }
-        #home {
-            background: url('pic/background.jpg') no-repeat center center;
-            background-size: cover;
-            background-attachment: fixed;
-            width: 100%;
-            height: 100vh;
-            text-align: center;
-            padding-top: 100px;
         }
         footer {
             background-color: #003366;
@@ -37,6 +32,7 @@
 
 <body data-spy="scroll" data-target=".navbar">
 
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="#home">My Portfolio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,12 +50,14 @@
         </div>
     </nav>
 
+    <!-- Home Section -->
     <section id="home" class="bg-primary text-white section-padding text-center">
         <h1>Welcome to My Portfolio</h1>
         <p>Explore the life of a programmer!</p>
         <a href="#contact" class="btn btn-light btn-lg">Contact Me</a>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="container section-padding">
         <h2 class="text-center mb-5">My Skills</h2>
         <div class="row text-center">
@@ -82,6 +80,7 @@
         </div>
     </section>
 
+    <!-- Certifications Section -->
     <section id="certs" class="container section-padding">
         <h2 class="text-center mb-5">My Certifications</h2>
         <div class="row text-center">
@@ -100,6 +99,7 @@
         </div>
     </section>
 
+    <!-- Badges Section -->
     <section id="badges" class="container section-padding">
         <h2 class="text-center mb-5">My Badges</h2>
         <div class="row text-center">
@@ -118,6 +118,7 @@
         </div>
     </section>
 
+    <!-- About Me Section -->
     <section id="about" class="container section-padding">
         <h2 class="text-center mb-5">About Me</h2>
         <p class="text-justify">Hi there! My name is Lyza Jerell S. Talaña. I am a New Era University third-year student pursuing a degree in Information Technology. I am passionate about technology, coding, and developing solutions that make a difference. As a part of my Application Development class, I have developed this portfolio to showcase my skills and achievements. I am always ready to learn and grow in this field!</p>
@@ -143,6 +144,7 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="container section-padding">
         <h2 class="text-center mb-5">Contact Me</h2>
         <form>
@@ -162,6 +164,7 @@
         </form>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Lyza Jerell S. Talaña. All Rights Reserved.</p>
     </footer>
