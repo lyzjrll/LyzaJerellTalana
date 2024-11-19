@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <!-- Bootstrap CSS -->
+    <title>Lyza's Portfolio</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -12,6 +11,13 @@
     <style>
         section {
             padding: 50px;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+
+        section#contact {
+            margin-top: 0;
+            margin-bottom: 0;
         }
 
         .cl_white {
@@ -24,23 +30,41 @@
 
         img {
             width: 100%;
-            max-width: 250px;
-            margin: 10px 0;
+            max-width: 250px; /* limit max width */
             transition: opacity 0.5s ease-in-out;
         }
 
         img:hover {
-            opacity: 0.7;
+            opacity: .10;
+        }
+
+        #certs img, #skills img, #badges img {
+            width: 100%;
+            max-width: 290px;
+        }
+
+        .col-text {
+            -webkit-column-count: 3;
+            text-align: justify;
+        }
+
+        footer {
+            background-color: #003366;
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 0;
         }
 
         #home {
             background: url(pic/background.jpg) no-repeat center center;
             background-size: cover;
-            padding-top: 100px;
             text-align: left;
+            padding-top: 100px;
+            padding-left: 30px;
         }
 
-        #home h1, #home p {
+        #home h1, #home p, #home button {
             margin-left: 30px;
         }
 
@@ -48,45 +72,42 @@
             margin-top: 20px;
         }
 
-        footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 0;
-        }
-
-        @media (max-width: 767px) {
-            /* Responsive adjustments for smaller screens */
+        @media screen and (max-width: 767px) {
             #home {
                 padding-top: 50px;
                 padding-left: 15px;
             }
 
+            #home h1, #home p {
+                font-size: 1.2em;
+            }
+
             .col-text {
                 -webkit-column-count: 1;
-                -moz-column-count: 1;
-                column-count: 1;
-                text-align: justify;
             }
 
-            .navbar-toggle {
-                display: block;
-            }
-
-            /* Navbar collapse styles */
-            .navbar-collapse {
-                text-align: center;
-            }
-
-            /* Images on mobile */
-            img {
+            #skills img, #certs img, #badges img {
                 width: 80%;
-                max-width: 200px;
+                margin: 10px auto;
             }
 
-            .navbar-nav li {
-                text-align: center;
+            .panel-body img {
+                width: 50%;
+            }
+
+            .form-group input, .form-group textarea {
+                width: 100%;
+            }
+        }
+        
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            .col-text {
+                -webkit-column-count: 2;
+            }
+
+            #skills img, #certs img, #badges img {
+                width: 80%;
+                margin: 10px auto;
             }
         }
     </style>
@@ -95,16 +116,16 @@
 <body data-spy="scroll" data-target=".navbar">
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
-            <!-- Navbar toggle button for mobile screens -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <!-- Navbar brand (Logo or name) -->
-            <a class="navbar-brand" href="#home">Portfolio</a>
-            <!-- Navbar items -->
-            <div class="collapse navbar-collapse" id="navbar-collapse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Lyza's Portfolio</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#skills">My Skills</a></li>
@@ -170,34 +191,33 @@
         <div class="page-header">
             <h1 class="text-center">About Me</h1>
         </div>
-        <div class="col-text">
-            Hi there! My name is Lyza Jerell S. Talaña. I am a New Era University third-year student taking Bachelor of Science in Information Technology or BSIT.
-            I am 20 years old, and I enjoy technology and development, hoping to turn my ideas into real-life practices. 
-            As such, my objective is to design application systems that are both effective and easy to use. I feel enthusiastic to continue utilizing my experience in IT and explore more fields of technology.
-        </div>
+        <div class="col-text">Hi there! My name is Lyza Jerell S. Talaña. I am a New Era University third year student taking Bachelor of Science in Information Technology or BSIT. 
+            I am 20 years of age, and interested in technology and development, hoping to turn my ideas into actual and real-life practices. Working towards my Application Development class, I developed this portfolio to present my expertise and past works. 
+            This is a field I enjoy as I get to code my way though solutions and am always ready to learn best ways and enhance my skills. As such, my objective is to design application systems which are effective and easy to use. 
+            I feel enthusiastic to continue utilizing my experience in IT, to examine most of the fields of technology and create something with relevance.</div><br/>
 
         <div class="row">
             <div class="col-md-6">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h4>PHP Programmer</h4>
+                        <h4> PHP Programmer</h4>
                     </div>
                     <div class="panel-body">
-                        <img src="pic/snoopy1.jpg" class="img-circle center-block"/>
-                        <p class="lead text-center">I do PHP Programming.</p>
+                        <img src="pic/snoopy1.jpg" class="img-circle center-block">
+                        <p class="lead text-center"> I do PHP Programming.</p>
                     </div>
                     <div class="panel-footer"></div>
                 </div>
             </div>
-
+       
             <div class="col-md-6">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h4>Web Designer</h4>
+                        <h4> Web Designer</h4>
                     </div>
                     <div class="panel-body">
-                        <img src="pic/snoopy2.jpg" class="img-circle center-block"/>
-                        <p class="lead text-center">I do CSS Bootstrap Designing.</p>
+                        <img src="pic/snoopy2.jpg" class="img-circle center-block">
+                        <p class="lead text-center"> I do Css Bootstrap Designing.</p>
                     </div>
                     <div class="panel-footer"></div>
                 </div>
@@ -209,27 +229,40 @@
         <div class="page-header">
             <h1 class="text-center">Contact Me</h1>
         </div>
-        <form class="col-md-5 col-md-offset-4">
-            <div class="form-group">
-                <input class="form-control" placeholder="Enter Your Name" type="text"/>
-            </div>
-            <div class="form-group">
-                <input class="form-control" placeholder="Enter Your E-mail" type="text"/>
-            </div>
-            <div class="form-group">
-                <input class="form-control" placeholder="Subject" type="text"/>
-            </div>
-            <div class="form-group">
-                <textarea class="form-control" placeholder="Enter Message"></textarea>
-            </div>
-            <div class="form-group">
-                <button class="btn btn-danger form-control">Send</button>
-            </div>
-        </form>
+        <div class="container">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">Full Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" placeholder="Full Name">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="col-sm-2 control-label">Message</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" id="message" rows="5" placeholder="Your message"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>All Rights Reserved &copy; 2024 Talaña Lyza Jerell</p>
+        <p>Created by Lyza Jerell Talaña | New Era University</p>
     </footer>
 </body>
 </html>
